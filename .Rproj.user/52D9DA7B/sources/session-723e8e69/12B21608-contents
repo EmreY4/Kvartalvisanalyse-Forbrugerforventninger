@@ -1,0 +1,21 @@
+#
+library(dkstat)
+
+alle <- dst_get_table(lang = "da")
+
+NKHC21 <- dst_meta("NKHC1")
+FORV1 <- dst_meta("FORV1")
+
+FORV1$values
+
+FORV1_filter <-list(
+ INDIKATOR= "*"
+  Tid= "*"
+)
+
+FORV1_data <- dst_get_data(table = "FORV1", query = FORV1_filter, lang = "da")
+
+
+gh repo create "Kvartalvisanalyse-Forbrugerforventninger" –public
+gh repo create "Kvartalvisanalyse-Forbrugerforventninger" --public
+git remote add origin git@github.com:EmreY4/Kvartalvisanalyse-Forbrugerforventninger.git
